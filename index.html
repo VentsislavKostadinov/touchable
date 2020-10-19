@@ -2,31 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Mobile Device Detection</title>
 </head>
-<body onload="isTouchDevice()">
+<body onload="resizedDynamically()">
 
-<h2 id="result">Touchable:</h2>
+<div class="root">
+    <h1 class='device-text'>Device:</h1>
+    <h2 class='orientation-text'>Orientation:</h2>
+</div>
 
-<script>
-
-    let result = document.getElementById('result');
-
-    function isTouchDevice() {
-
-        return true === ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
-
-    }
-
-    if(isTouchDevice()===true) {
-      //  alert('Touch Device'); //your logic for touch device
-        result.innerHTML = `Device is touchable`;
-    }
-    else {
-        //alert('Not a Touch Device'); //your logic for non touch device
-        result.innerHTML = `Device is NOT touchable`;
-    }
-</script>
+<script src="detectDevice.js"></script>
 
 </body>
 </html>
