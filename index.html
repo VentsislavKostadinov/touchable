@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="isTouchDevice()">
+
+<h2 id="result">Touchable:</h2>
+
+<script>
+
+    let result = document.getElementById('result');
+
+    function isTouchDevice() {
+
+        return true === ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
+
+    }
+
+    if(isTouchDevice()===true) {
+      //  alert('Touch Device'); //your logic for touch device
+        result.innerHTML = `Device is touchable`;
+    }
+    else {
+        //alert('Not a Touch Device'); //your logic for non touch device
+        result.innerHTML = `Device is NOT touchable`;
+    }
+</script>
+
+</body>
+</html>
