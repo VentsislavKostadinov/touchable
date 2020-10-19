@@ -15,7 +15,7 @@ function detectDevice() {
      */
 
     const detectDeviceObj = {
-        device: navigator.maxTouchPoints ? 'touchable: mobile/laptop' : 'computer',
+        device: navigator.maxTouchPoints ? 'is touchable - mobile/laptop-touch screen' : 'computer',
         orientation: !navigator.maxTouchPoints ? 'desktop orientation' : !window.screen.orientation.angle ? 'portrait' : 'landscape'
     }
 
